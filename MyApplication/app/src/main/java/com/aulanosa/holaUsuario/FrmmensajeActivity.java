@@ -16,6 +16,6 @@ public class FrmmensajeActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
 
-        txtMensaje.setText("Hola "+bundle.getString("nombre"));
+        txtMensaje.setText("Hola "+bundle.getString("nombre")+" Su número de teléfono es "+bundle.getInt("telefono"));
     }
 }

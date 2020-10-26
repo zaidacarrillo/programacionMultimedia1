@@ -27,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtras(bundle);
                 startActivity(intent);
 
+                Bundle bundle2 = new Bundle();
+                bundle.putInt("telefono", Integer.parseInt(Txtmensaje.getText().toString()));
+                intent.putExtras(bundle2);
+                startActivity(intent);
+
             }
         });
 

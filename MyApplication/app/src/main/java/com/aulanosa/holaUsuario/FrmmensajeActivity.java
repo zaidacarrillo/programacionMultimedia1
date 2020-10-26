@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.text.BreakIterator;
+
 public class FrmmensajeActivity extends AppCompatActivity {
 
     @Override
@@ -14,8 +16,10 @@ public class FrmmensajeActivity extends AppCompatActivity {
 
         TextView txtMensaje = (TextView) findViewById(R.id.TxtMensaje);
 
+
         Bundle bundle = getIntent().getExtras();
 
-        txtMensaje.setText("Hola "+bundle.getString("nombre")+" Su número de teléfono es "+bundle.getInt("telefono"));
+        txtMensaje.setText("Hola "+bundle.getString("nombre")+bundle.getString("apellidos")+"\n su nº de teléfono es: "+bundle.getString("telefono")+"\n Dni: "+bundle.getString("dni")+"\n Dirección: "+bundle.getString("direccion"));
+
     }
 }
